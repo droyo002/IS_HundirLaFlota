@@ -9,8 +9,10 @@ public class TBarco {
 	private int longitud;
 	
 	public TBarco(){
-		
+		this.posiciones=new List<>();
 	}
+	
+	private Iterator<Posicion> getIteardor(){return this.posiciones.iterator();}
 	
 	public boolean esta(int pX, int pY){
 		boolean esta = false;
@@ -23,11 +25,12 @@ public class TBarco {
 		}
 		return esta;
 	}
-	
 	public void addEscudo(){
 		escudo = new Escudo();
 	}
-	
+	public void addPos(Posicion pPos){
+		this.posiciones.add(pPos);
+	}
 	public void restarEscudo(){
 		escudo.restarImpactos();
 	}
@@ -35,5 +38,4 @@ public class TBarco {
 	public int getLongitud(){
 		return this.longitud;
 	}
-	
 }

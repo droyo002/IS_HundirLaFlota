@@ -7,15 +7,15 @@ import java.util.List;
 public class Tablero {
 	private static int ANCHO=10;
 	private static int ALTO=10;
-
 	private List<TBarco> flota;
 
 	public Tablero() {
 		flota= new ArrayList<TBarco>();
 	}
 
-	public void addBarco (TBarco pBarco) {
-		flota.add(pBarco);
+	public void addBarco (int pX, int pY, String pDir, int pTipo){
+		TBarco barco=BarcoFactory.getBarcoFactory().crearBarco(pX,pY,pDir,pTipo);
+		this.compro
 	}
 
 	public void eliminarBarco(TBarco pBarco) {
@@ -24,7 +24,7 @@ public class Tablero {
 	private Iterator<TBarco> getIterador(){
 		return this.flota.iterator();
 	}
-	public boolean comprobarPosiciones(int pX,int pY) {
+	public boolean comprobarPosiciones(int pX, int pY, TBarco pBarco) {
 		boolean libre = true;
 		Iterator <TBarco> it= flota.iterator();
 		TBarco b;
