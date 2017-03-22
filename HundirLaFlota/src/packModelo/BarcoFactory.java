@@ -2,6 +2,8 @@ package packModelo;
 
 public class BarcoFactory {
 	private static BarcoFactory mFactory=new BarcoFactory();
+	
+	
 	private BarcoFactory(){}
 	public static getBarcoFactory(){return mFactory;}
 	public crearBarco(int pX, int pY, String pDir, int pTipo){

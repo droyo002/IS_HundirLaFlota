@@ -8,9 +8,6 @@ public class Tablero {
 	private static int ANCHO=10;
 	private static int ALTO=10;
 	private List<TBarco> flota;
-	
-	
-	
 
 	public Tablero() {
 		flota= new ArrayList<TBarco>();
