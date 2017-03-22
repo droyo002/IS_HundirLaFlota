@@ -7,6 +7,8 @@ public class TBarco {
 	private List<Posicion> posiciones;
 	private Escudo escudo;
 	private int longitud;
+
+	
 	
 	public TBarco(){
 		this.posiciones=new List<>();
