@@ -6,6 +6,7 @@ import java.util.List;
 public class TBarco {
 	private List<Posicion> posiciones;
 	private Escudo escudo;
+	private int longitud;
 	
 	public TBarco(){
 		
@@ -29,6 +30,10 @@ public class TBarco {
 	
 	public void restarEscudo(){
 		escudo.restarImpactos();
+	}
+	
+	public int getLongitud(){
+		return this.longitud;
 	}
 	
 }
