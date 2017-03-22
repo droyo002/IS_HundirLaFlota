@@ -14,8 +14,9 @@ public class Tablero {
 		flota= new ArrayList<TBarco>();
 	}
 
-	public void addBarco (TBarco pBarco) {
-		flota.add(pBarco);
+	public void addBarco (int pX, int pY, String pDir, int pTipo){
+		TBarco barco=BarcoFactory.getBarcoFactory().crearBarco(pX,pY,pDir,pTipo);
+		this.compro
 	}
 
 	public void eliminarBarco(TBarco pBarco) {
@@ -24,19 +25,17 @@ public class Tablero {
 	private Iterator<TBarco> getIterador(){
 		return this.flota.iterator();
 	}
-	public boolean comprobarPosiciones(int pX,int pY) {
+	public boolean comprobarPosiciones(int pX, int pY, TBarco pBarco) {
 		boolean libre = true;
 		Iterator <TBarco> it= flota.iterator();
 		TBarco b;
 		while(it.hasNext()&&libre){
-			b=(TBarco)it.next;
+			b=(TBarco)it.next();
 			for(int i=pX-1;pX<=pX+1;pX++){
 				for(int j=pY-1; pY<=pY+1;pY++){
 					if(j!=pY&&i!=pX){
 						if(b.esta(j,i)){
 							libre=false;
-							break;
-							break;
 						}
 					}
 				}
