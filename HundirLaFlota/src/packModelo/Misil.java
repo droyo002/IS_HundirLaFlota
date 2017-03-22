@@ -3,8 +3,8 @@ package packModelo;
 public class Misil implements Armamento {
 	private int cantidad;
 	
-	public Misil() {
-		cantidad=0;
+	public Misil(int pCantidad) {
+		cantidad=pCantidad;
 	}
 	@Override
 	public void marcarCasilla(int pX, int pY) {

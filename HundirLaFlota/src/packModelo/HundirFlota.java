@@ -21,11 +21,11 @@ public class HundirFlota {
 	}
 	
 	public void cargarAlmacen() {
-		almacen.add(2, 50);
-		almacen.add(3, 50);
-		almacen.add(4, 50);
-		almacen.add(5, 50);
-		
+		almacen.add("Escudo",50);
+		almacen.add("Bomba", 50);
+		almacen.add("Misil", 50);
+		almacen.add("Misil dirigido", 50);
+		int n;
 	}
 	
 	public void inicializarPartida() {

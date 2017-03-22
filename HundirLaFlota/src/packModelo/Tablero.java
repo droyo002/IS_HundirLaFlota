@@ -29,14 +29,12 @@ public class Tablero {
 		Iterator <TBarco> it= flota.iterator();
 		TBarco b;
 		while(it.hasNext()&&libre){
-			b=(TBarco)it.next;
+			b=(TBarco)it.next();
 			for(int i=pX-1;pX<=pX+1;pX++){
 				for(int j=pY-1; pY<=pY+1;pY++){
 					if(j!=pY&&i!=pX){
 						if(b.esta(j,i)){
 							libre=false;
-							break;
-							break;
 						}
 					}
 				}

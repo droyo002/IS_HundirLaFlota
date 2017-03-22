@@ -4,8 +4,8 @@ public class Escudo implements Armamento {
 	private int numeroImpactos=2;
 	private int cantidad=0;
 
-	public Escudo() {
-		
+	public Escudo(int pCantidad) {
+		cantidad=pCantidad;
 	}
 	@Override
 	public void marcarCasilla(int pX, int pY) {

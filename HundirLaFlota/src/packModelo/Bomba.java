@@ -2,8 +2,8 @@ package packModelo;
 
 public class Bomba implements Armamento {
 	private int cantidad;
-	public Bomba() {
-		cantidad=5;
+	public Bomba(int pCantidad) {
+		cantidad=pCantidad;
 		
 	}
 
