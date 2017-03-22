@@ -18,25 +18,19 @@ public class ListaArmamento {
 	public void add(int pTipo,int cantidad) {
 		switch (pTipo) {
 		case 2:
-			Escudo es=(Escudo) this.lista.get(2);
-			es.addCantidad(cantidad);
+			this.lista.get(1).addCantidad(cantidad);
 			break;
 		
-
 		case 3:
-			Bomba bb=(Bomba) this.lista.get(3);
-			bb.addCantidad(cantidad);
+			this.lista.get(2).addCantidad(cantidad);
 			break;
 	
 		case 4:
-
-			MisilDirigido md = (MisilDirigido) this.lista.get(4);
-			md.addCantidad(cantidad);
+			this.lista.get(3).addCantidad(cantidad);
 			break;
 	
 		case 5:
-			Misil ms = (Misil) this.lista.get(5);
-			ms.addCantidad(cantidad);
+			this.lista.get(4).addCantidad(cantidad);
 			break;
 }
 

@@ -7,10 +7,6 @@ public class HundirFlota {
 	
 	private HundirFlota() {
 		almacen=new ListaArmamento();
-		almacen.add(2,50);
-		almacen.add(3,50);
-		almacen.add(4,50);
-		almacen.add(5,50);
 	}
 	
 	public static HundirFlota getHundirFlota() {
@@ -38,6 +34,14 @@ public class HundirFlota {
 	
 	public void comenzarPartida() {
 		
+	}
+	
+	public boolean posicionApta(int pX, int pY){
+		boolean apta = false;
+		
+		
+		
+		return apta;
 	}
 	
 	
