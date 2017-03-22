@@ -5,16 +5,16 @@ public class BarcoFactory {
 	
 	
 	private BarcoFactory(){}
-	public static getBarcoFactory(){return mFactory;}
-	public crearBarco(int pX, int pY, String pDir, int pTipo){
-		TBarco barco;
+	public static BarcoFactory getBarcoFactory(){return mFactory;}
+	public TBarco crearBarco(int pX, int pY, String pDir, int pTipo){
+		TBarco barco=null;
 		Posicion pos;
 		switch(pTipo){
 		case 0:
 			barco=new Fragata();
 			break;
 		case 1:
-			barco=new Destructor();
+			barco= new Destructor();
 			break;
 		case 2:
 			barco=new Submarino();
@@ -35,5 +35,6 @@ public class BarcoFactory {
 				barco.addPos(pos);
 			}
 		}
+		return barco;
 	}
 }

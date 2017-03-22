@@ -2,7 +2,7 @@ package packModelo;
 
 import java.util.List;
 
-public class Fragata {
+public class Fragata extends TBarco{
 	private List<Posicion> posiciones;
 	private Escudo escudo;
 	private int longitud = 1;

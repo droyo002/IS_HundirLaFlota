@@ -2,7 +2,7 @@ package packModelo;
 
 import java.util.List;
 
-public class Destructor {
+public class Destructor extends TBarco{
 	private List<Posicion> posiciones;
 	private Escudo escudo;
 	private int longitud = 2;
