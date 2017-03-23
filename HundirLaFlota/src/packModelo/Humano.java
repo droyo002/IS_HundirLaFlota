@@ -3,14 +3,16 @@ package packModelo;
 public class Humano implements Jugador {
 	
 	private ListaArmamento armas;
-	private Humano mHumano;
+	private Tablero tablero;
+	private static Humano mHumano;
 	private int dinero=2000;
 	
 	private Humano() {
 		armas= new ListaArmamento();
+		tablero= new Tablero();
 	}
 	
-	public Humano getHumano() {
+	public static Humano getHumano() {
 		if (mHumano==null) {
 			mHumano=new Humano();
 		}
@@ -29,21 +31,19 @@ public class Humano implements Jugador {
 	}
 
 	@Override
-	public void colocarBarco(int pX, int pY, int pLength) {
+	public void colocarBarco(int pX, int pY, String pDireccion,int pLength) {
 		// TODO Auto-generated method stub
-		for (int i = 0; i > pLength-1; i++) {
-			if (revisarVecinos(pX)) {
-				
-			}
-		}
+		tablero.addBarco(pX,pY,pDireccion,pLength);
+		
+		
 	}
 	public void colocarBarcoVertical(int pX, int pY, int pLength) {
 		// TODO Auto-generated method stub
-		for (int i = 0; i > pLength-1; i++) {
+		/*for (int i = 0; i > pLength-1; i++) {
 			if (revisarVecinos(pX)) {
 				
 			}
-		}
+		}*/
 	}
 	private boolean revisarVecinos(int pX) {
 		return false;

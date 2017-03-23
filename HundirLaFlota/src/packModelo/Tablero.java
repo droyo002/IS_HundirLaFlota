@@ -15,13 +15,13 @@ public class Tablero {
 
 	public void addBarco (int pX, int pY, String pDir, int pTipo){
 		TBarco barco=BarcoFactory.getBarcoFactory().crearBarco(pX,pY,pDir,pTipo);
-		int n= barco.getLongitud();
+		int longitud= barco.getLongitud();
 		boolean flg=true;
 		if(pDir.equals("Sur")){
-			flg=this.comprobarVertical(pX, pY, n);
+			flg=this.comprobarVertical(pX, pY, longitud);
 			}
 		else{
-			flg=this.comprobarHorizontal(pX, pY, n);}
+			flg=this.comprobarHorizontal(pX, pY, longitud);}
 		if(flg){
 			this.flota.add(barco);
 		}
@@ -29,10 +29,10 @@ public class Tablero {
 	
 	
 
-	private boolean comprobarHorizontal(int pX, int pY, int n) {
+	private boolean comprobarHorizontal(int pX, int pY, int longitud) {
 		
 		boolean flg=true;
-		for(int i=pY;i<=pY+n;i++){
+		for(int i=pY;i<=pY+longitud;i++){
 			if(!this.comprobarPosiciones(pX, i)){
 				flg=false;
 				break;
@@ -64,9 +64,10 @@ public class Tablero {
 		TBarco b;
 		while(it.hasNext()&&libre){
 			b=(TBarco)it.next();
-			for(int i=pX-1;pX<=pX+1;pX++){
-				for(int j=pY-1; pY<=pY+1;pY++){
+			for(int i=pX-1;i<=pX+1;i++){
+				for(int j=pY-1; j<=pY+1;j++){
 						if(b.esta(j,i)){
+							
 							libre=false;
 						
 					}
