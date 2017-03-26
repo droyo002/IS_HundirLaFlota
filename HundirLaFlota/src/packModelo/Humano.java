@@ -29,55 +29,30 @@ public class Humano implements Jugador {
 		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
-	public void colocarBarco(int pX, int pY, String pDireccion,int pLength) {
-		// TODO Auto-generated method stub
-		tablero.addBarco(pX,pY,pDireccion,pLength);
+	public void generaryColocarBarco(int pX, int pY, String pDireccion){
 		
-		
+		if(comprobarBarco(pX,pY,barco.getLenght())){
+			TBarco barco=BarcoFactory.getBarcoFactory().crearBarco(pX,pY,pDireccion);
+			this.tabler.addBarco(Tbarco);
+		}
 	}
-	public void colocarBarcoVertical(int pX, int pY, int pLength) {
-		// TODO Auto-generated method stub
-		/*for (int i = 0; i > pLength-1; i++) {
-			if (revisarVecinos(pX)) {
-				
-			}
-		}*/
+	
+	
+	@Override
+	private void comprobarColocacion(int pX, int pY, int pL) {
+		flag boolean=true;
+		if(pDir.equals("Sur")){
+			flag=this.tablero.comprobarVertical(pX,pY,pL);
+		}
+		else{
+			flag=this.tablero.comprobarHorizontal(pX,pY,pL);
+		}
+		return flag;
 	}
+	
 	private boolean revisarVecinos(int pX) {
 		return false;
-	}
-	
-	private void calcularHorizontal(int pX, int pY) {
-		
-		int xUnidades= pX%10;
-		int yUnidades= pY%10;
-	
-		if (xUnidades<yUnidades) {
-			//derecha
-		}
-		else {
-			//izquierda
-		}
-		
-		
-				
-	}
-	private void calcularVertical(int pX, int pY) {
-		
-		int xDecimal= pX%10;
-		int yDecimal= pY%10;
-	
-		if (xDecimal<yDecimal) {
-			//derecha
-		}
-		else {
-			//izquierda
-		}
-		
-		
-				
 	}
 
 	@Override

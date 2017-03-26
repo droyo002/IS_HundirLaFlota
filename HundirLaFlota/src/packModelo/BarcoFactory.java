@@ -23,19 +23,6 @@ public class BarcoFactory {
 			barco=new Portaviones();
 			break;		
 		}
-		if(pDir=="Sur"){
-			for(int i=pX;i<=pX+pTipo;i++){
-				pos= new Posicion(pX,i);
-				barco.addPos(pos);
-			}
-		}
-		else{
-			for(int i=pY;i<=pY+pTipo;i++){
-				
-				pos= new Posicion(pX,i);
-				barco.addPos(pos);
-			}
-		}
 		return barco;
 	}
 }

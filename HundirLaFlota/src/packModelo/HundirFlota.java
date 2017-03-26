@@ -47,9 +47,6 @@ public class HundirFlota {
 		return apta;
 	}
 	
-	
-	
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		HundirFlota.getHundirFlota().cargarAlmacen();
