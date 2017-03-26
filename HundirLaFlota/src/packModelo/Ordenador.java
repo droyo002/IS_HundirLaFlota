@@ -28,7 +28,7 @@ public class Ordenador implements Jugador {
 	}
 
 	@Override
-	public void colocarBarco(int pX, int pY,String pDireccion, int pLength) {
+	public void colocarBarco(int pX, int pY,String pDireccion) {
 		// TODO Auto-generated method stub
 		for (int i = 0; i > pLength-1; i++) {
 			if (revisarVecinos(pX)) {

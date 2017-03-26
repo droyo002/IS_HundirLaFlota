@@ -13,23 +13,11 @@ public class Tablero {
 		flota= new ArrayList<TBarco>();
 	}
 
-	public void addBarco (int pX, int pY, String pDir, int pTipo){
-		TBarco barco=BarcoFactory.getBarcoFactory().crearBarco(pX,pY,pDir,pTipo);
-		int longitud= barco.getLongitud();
-		boolean flg=true;
-		if(pDir.equals("Sur")){
-			flg=this.comprobarVertical(pX, pY, longitud);
-			}
-		else{
-			flg=this.comprobarHorizontal(pX, pY, longitud);}
-		if(flg){
-			this.flota.add(barco);
-		}
-	}
+	public void addBarco (TBarco pBarco){
+		this.flota.add(pBarco);		
+	}	
 	
-	
-
-	private boolean comprobarHorizontal(int pX, int pY, int longitud) {
+	public boolean comprobarHorizontal(int pX, int pY, int longitud) {
 		
 		boolean flg=true;
 		for(int i=pY;i<=pY+longitud;i++){
@@ -41,7 +29,7 @@ public class Tablero {
 		return flg;
 	}
 
-	private boolean comprobarVertical(int pX, int pY, int n) {
+	public boolean comprobarVertical(int pX, int pY, int n) {
 		boolean flg=true;
 		for(int i=pX;i<=pX+n;i++){
 			if(!this.comprobarPosiciones(i, pY)){
