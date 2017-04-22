@@ -7,17 +7,17 @@ public class Destructor extends TBarco{
 	private Escudo escudo;
 	private int longitud = 2;
 	
-	public Destructor(int px, int pY, String pDir){
+	public Destructor(int pX, int pY, String pDir){
 		if(pDir=="Sur"){
 			for(int i=pX;i<=pX+2;i++){
-				pos= new Posicion(pX,i);
-				barco.addPos(pos);
+				Posicion pos= new Posicion(pX,i);
+				posiciones.add(pos);
 			}
 		}
 		else{
 			for(int i=pY;i<=pY+2;i++){
-				pos= new Posicion(pX,i);
-				barco.addPos(pos);
+				Posicion pos= new Posicion(pX,i);
+				posiciones.add(pos);
 			}
 		}
 	}

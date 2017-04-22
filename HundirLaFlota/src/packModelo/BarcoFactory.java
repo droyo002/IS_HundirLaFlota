@@ -11,16 +11,16 @@ public class BarcoFactory {
 		Posicion pos;
 		switch(pTipo){
 		case 0:
-			barco=new Fragata();
+			barco=new Fragata(pX,pY,pDir);
 			break;
 		case 1:
-			barco= new Destructor();
+			barco= new Destructor(pX,pY,pDir);
 			break;
 		case 2:
-			barco=new Submarino();
+			barco=new Submarino(pX,pY,pDir);
 			break;
 		case 3:
-			barco=new Portaviones();
+			barco=new Portaviones(pX,pY,pDir);
 			break;		
 		}
 		return barco;

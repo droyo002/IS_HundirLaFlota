@@ -36,7 +36,7 @@ public class HundirFlota {
 		
 	}
 	public void colocarBarco(int pX, int pY,String pDireccion, int pTipo) {
-		Humano.getHumano().colocarBarco(pX, pY,pDireccion, pTipo);
+		Humano.getHumano().generaryColocarBarco(pX, pY,pDireccion, pTipo);
 	}
 	
 	public boolean posicionApta(int pX, int pY){
@@ -50,10 +50,10 @@ public class HundirFlota {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		HundirFlota.getHundirFlota().cargarAlmacen();
-		Humano.getHumano().colocarBarco(5, 5,"Sur", 3);
-		Humano.getHumano().colocarBarco(3, 3,"Sur", 2);
-		Humano.getHumano().colocarBarco(3, 4,"Sur", 1);
-		Humano.getHumano().colocarBarco(5, 5,"Sur", 3);
+		Humano.getHumano().generaryColocarBarco(5, 5,"Sur", 3);
+		Humano.getHumano().generaryColocarBarco(3, 3,"Sur", 2);
+		Humano.getHumano().generaryColocarBarco(3, 4,"Sur", 1);
+		Humano.getHumano().generaryColocarBarco(5, 5,"Sur", 3);
 		int i;
 	}
 

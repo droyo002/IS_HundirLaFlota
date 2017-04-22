@@ -19,30 +19,30 @@ public class Humano implements Jugador {
 		return mHumano;
 	}
 	@Override
-	public void atacarPosicion(int pX, int pY) {
+	public void atacarPunto(int pX, int pY) {
 		// TODO Auto-generated method stub
-		
+		armas.comprobarArmamento(pTipo);
 	}
-
+	
+	
+	
 	@Override
 	public void ponerEscudo(int pX, int pY) {
 		// TODO Auto-generated method stub
 		
 	}
-	@Override
-	public void generaryColocarBarco(int pX, int pY, String pDireccion){
+	public void generaryColocarBarco(int pX, int pY, String pDireccion,int pTipo){
+		TBarco barco=BarcoFactory.getBarcoFactory().crearBarco(pX,pY,pDireccion,pTipo);
 		
-		if(comprobarBarco(pX,pY,barco.getLenght())){
-			TBarco barco=BarcoFactory.getBarcoFactory().crearBarco(pX,pY,pDireccion);
-			this.tabler.addBarco(Tbarco);
+		if(comprobarColocacion(pX,pY,pDireccion,barco.getLongitud())){
+			this.tablero.addBarco(barco);
 		}
 	}
 	
 	
-	@Override
-	private void comprobarColocacion(int pX, int pY, int pL) {
-		flag boolean=true;
-		if(pDir.equals("Sur")){
+	private boolean comprobarColocacion(int pX, int pY,String pDireccion, int pL) {
+		boolean flag =true;
+		if(pDireccion.equals("Sur")){
 			flag=this.tablero.comprobarVertical(pX,pY,pL);
 		}
 		else{
