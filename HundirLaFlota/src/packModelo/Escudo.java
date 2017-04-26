@@ -1,13 +1,13 @@
 package packModelo;
 
-public class Escudo implements Armamento {
+public class Escudo extends Armamento {
 	private int numeroImpactos=2;
 	private int cantidad=0;
 
 	public Escudo(int pCantidad) {
-		cantidad=pCantidad;
+		super(pCantidad);
 	}
-	@Override
+	
 	public void marcarCasilla(int pX, int pY) {
 		// TODO Auto-generated method stub
 		

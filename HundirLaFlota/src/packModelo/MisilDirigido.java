@@ -1,11 +1,11 @@
 package packModelo;
 
-public class MisilDirigido implements Armamento{
+public class MisilDirigido extends Armamento{
 	private int cantidad;
 	public MisilDirigido(int pCantidad) {
-		cantidad=pCantidad;
+		super(pCantidad);
 	}
-	@Override
+	
 	public void marcarCasilla(int pX, int pY) {
 		// TODO Auto-generated method stub
 		

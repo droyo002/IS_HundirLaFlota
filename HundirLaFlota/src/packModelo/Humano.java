@@ -18,11 +18,7 @@ public class Humano implements Jugador {
 		}
 		return mHumano;
 	}
-	@Override
-	public void atacarPunto(int pX, int pY) {
-		// TODO Auto-generated method stub
-		armas.comprobarArmamento(pTipo);
-	}
+	
 	
 	
 	
@@ -69,6 +65,12 @@ public class Humano implements Jugador {
 
 	@Override
 	public void comprar(TBarco pBarco) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void atacarPunto(int pX, int pY) {
 		// TODO Auto-generated method stub
 		
 	}

@@ -15,12 +15,6 @@ public class ListaArmamento {
 		lista.add(ArmamentoFactory.getArmamentoFactory().crearArmamento(pArmamento, pCantidad));
 	}
 	
-	public boolean comprobarArmamento(int pTipo) {
-		buscarArmamento( pTipo);
-	}
 	
-	public Armamento buscarArmamento(int pTipo) {
-		
-	}
 
 }

@@ -15,11 +15,7 @@ public class Ordenador implements Jugador {
 		}
 		return mOrdenador;
 	}
-	@Override
-	public void atacarPosicion(int pX, int pY) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	@Override
 	public void ponerEscudo(int pX, int pY) {
@@ -27,15 +23,7 @@ public class Ordenador implements Jugador {
 		
 	}
 
-	@Override
-	public void colocarBarco(int pX, int pY,String pDireccion) {
-		// TODO Auto-generated method stub
-		for (int i = 0; i > pLength-1; i++) {
-			if (revisarVecinos(pX)) {
-				
-			}
-		}
-	}
+	
 	public void colocarBarcoVertical(int pX, int pY, int pLength) {
 		// TODO Auto-generated method stub
 		for (int i = 0; i > pLength-1; i++) {
@@ -93,6 +81,18 @@ public class Ordenador implements Jugador {
 
 	@Override
 	public void comprar(TBarco pBarco) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void atacarPunto(int pX, int pY) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void generaryColocarBarco(int pX, int pY, String pDir, int pTipo) {
 		// TODO Auto-generated method stub
 		
 	}

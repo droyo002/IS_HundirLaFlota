@@ -1,13 +1,13 @@
 package packModelo;
 
-public class Bomba implements Armamento {
+public class Bomba extends Armamento {
 	private int cantidad;
 	public Bomba(int pCantidad) {
-		cantidad=pCantidad;
+		super(pCantidad);
 		
 	}
 
-	@Override
+	
 	public void marcarCasilla(int pX, int pY) {
 		// TODO Auto-generated method stub
 		

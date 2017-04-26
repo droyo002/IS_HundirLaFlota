@@ -1,12 +1,12 @@
 package packModelo;
 
-public class Misil implements Armamento {
+public class Misil extends Armamento {
 	private int cantidad;
 	
 	public Misil(int pCantidad) {
-		cantidad=pCantidad;
+		super(pCantidad);
 	}
-	@Override
+	
 	public void marcarCasilla(int pX, int pY) {
 		// TODO Auto-generated method stub
 		
