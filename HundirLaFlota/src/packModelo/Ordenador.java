@@ -86,7 +86,7 @@ public class Ordenador implements Jugador {
 	}
 
 	@Override
-	public void atacarPunto(int pX, int pY) {
+	public void atacarPunto(int pX, int pY, String pArma) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -95,5 +95,11 @@ public class Ordenador implements Jugador {
 	public void generaryColocarBarco(int pX, int pY, String pDir, int pTipo) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public boolean comprobarAlmacen(String pTipo) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }

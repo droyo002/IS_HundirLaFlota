@@ -25,7 +25,7 @@ public class ArmamentoFactory {
 		else if (pArmamento.equals("Misil")) {
 			arma= new Misil(pCantidad);
 		}
-		else if (pArmamento.equals("Misildirigido")) {
+		else if (pArmamento.equals("Misil dirigido")) {
 			arma= new MisilDirigido(pCantidad);
 		}
 		return arma;

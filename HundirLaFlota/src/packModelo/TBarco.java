@@ -5,15 +5,16 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class TBarco {
-	private List<Posicion> posiciones;
-	private Escudo escudo;
-	private int longitud;
+	protected List<Posicion> posiciones;
+	protected Escudo escudo;
+	protected int longitud;
+	protected int cantidad;
 	
 	public TBarco(){
 		this.posiciones=new ArrayList<Posicion>();
 	}
 	
-	private Iterator<Posicion> getIteardor(){return this.posiciones.iterator();}
+	public Iterator<Posicion> getIterador(){return this.posiciones.iterator();}
 	
 	public boolean esta(int pX, int pY){
 		boolean esta = false;
@@ -38,5 +39,12 @@ public class TBarco {
 	
 	public int getLongitud(){
 		return this.longitud;
+	}
+	
+	public void restarCantidad() {
+		cantidad--;
+	}
+	public List<Posicion> getPosiciones() {
+		return posiciones;
 	}
 }

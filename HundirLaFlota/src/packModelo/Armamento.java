@@ -27,5 +27,9 @@ public abstract class Armamento {
 		}
 		return cant;
 	}
+	
+	public int getCantidad() {
+		return cantidad;
+	}
 
 }

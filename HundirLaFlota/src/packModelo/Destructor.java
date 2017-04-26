@@ -1,21 +1,22 @@
 package packModelo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Destructor extends TBarco{
-	private List<Posicion> posiciones;
-	private Escudo escudo;
-	private int longitud = 2;
+	
 	
 	public Destructor(int pX, int pY, String pDir){
-		if(pDir=="Sur"){
-			for(int i=pX;i<=pX+2;i++){
+		longitud = 2;
+		
+		if(pDir=="Vertical"){
+			for(int i=pX;i<pX+longitud;i++){
 				Posicion pos= new Posicion(pX,i);
 				posiciones.add(pos);
 			}
 		}
 		else{
-			for(int i=pY;i<=pY+2;i++){
+			for(int i=pY;i<pY+longitud;i++){
 				Posicion pos= new Posicion(pX,i);
 				posiciones.add(pos);
 			}

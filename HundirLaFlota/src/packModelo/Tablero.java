@@ -3,8 +3,11 @@ package packModelo;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Observable;
 
-public class Tablero {
+import Interfaz.VHundirLaFlota;
+
+public class Tablero extends Observable {
 	private static int ANCHO=10;
 	private static int ALTO=10;
 	private List<TBarco> flota;
@@ -13,9 +16,36 @@ public class Tablero {
 		flota= new ArrayList<TBarco>();
 	}
 
+	public void añadirObserver(VHundirLaFlota h) {
+		addObserver(h);
+		
+	}
+	
 	public void addBarco (TBarco pBarco){
-		this.flota.add(pBarco);		
+		
+		this.flota.add(pBarco);	
+		notificar(pBarco);
+		
+		
 	}	
+	
+	private void notificar(TBarco pBarco) {
+		
+		Iterator <Posicion> it= pBarco.getIterador();
+		Posicion p;
+		while(it.hasNext()){
+			
+			p= it.next();
+			setChanged();
+			notifyObservers(calcularPos(p.getX(),p.getY()));
+		}
+		
+	}
+	
+	private int calcularPos(int pX,int pY) {
+		return pY*10+pX;
+	}
+	
 	
 	public boolean comprobarHorizontal(int pX, int pY, int longitud) {
 		
@@ -54,7 +84,8 @@ public class Tablero {
 			b=(TBarco)it.next();
 			for(int i=pX-1;i<=pX+1;i++){
 				for(int j=pY-1; j<=pY+1;j++){
-						if(b.esta(j,i)){
+					
+						if(b.esta(i,j)){
 							
 							libre=false;
 						

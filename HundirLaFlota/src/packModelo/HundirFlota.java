@@ -25,7 +25,6 @@ public class HundirFlota {
 		almacen.add("Bomba", 50);
 		almacen.add("Misil", 50);
 		almacen.add("Misil dirigido", 50);
-		int n;
 	}
 	
 	public void inicializarPartida() {
@@ -45,6 +44,10 @@ public class HundirFlota {
 		
 		
 		return apta;
+	}
+	
+	public void listaTipoBarco() {
+		
 	}
 	
 	public static void main(String[] args) {

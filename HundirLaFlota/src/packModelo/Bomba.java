@@ -13,17 +13,9 @@ public class Bomba extends Armamento {
 		
 	}
 
-	@Override
-	public void addCantidad(int pCantidad) {
-		// TODO Auto-generated method stub
-		cantidad+=pCantidad;
-	}
+	
 
-	@Override
-	public void restarCantidad(int pCantidad) {
-		// TODO Auto-generated method stub
-		cantidad-=pCantidad;
-	}
+
 	
 
 }
